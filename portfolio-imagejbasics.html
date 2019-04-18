@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="A portfolio of science writing samples">
+  <meta name="author" content="Leigh Henderson">
+
+  <title>Science Writing Portfolio</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="css/agency.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/">Leigh Henderson's Science Writing</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/#portfolio">Portfolio</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead" style='background-image: url("../assets/portfolio/ImageJ_StarsToCount2.jpg")';>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">ImageJ Basics</div>
+        <div class="intro-heading text-uppercase">Automatically count ojects in an image</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content: Introduction to ImageJ -->
+  <div style="margin:50px 5% 50px 5%;">
+    <p>Have you ever wanted to quantify something from an image? For example:
+
+    - The number of stars in a photo of the nighttime sky
+    - The number of cells under a microscope, and the area of each
+    - The distance between two points on a map
+
+    ImageJ is image-processing software specially made for scientific measurements. It is free to <a href="https://imagej.nih.gov/ij/download.html">download at imagej.nih.gov</a> and has a large online <a href="http://imagejdocu.tudor.lu/">wiki</a>.
+
+    ImageJ excells in *automating* image quantification. For example, counting hundreds of stars in 10+ images of the nightime sky. Someone could do this manually, but the star count can be less biased and more accurate (not to mention less tedious!) when automated. 
+    </p>
+
+    <h1>Easy example</h1>
+
+        <p>Let's count the stars in an image of the nighttime sky:</p>
+            <ol>
+            <li>Save the image below to your device (see image credit below). <code>File > Open</code><br>
+                <img src="/assets/portfolio/ImageJ_StarsToCount.jpg" alt="Practice image for counting stars." style="width:400px"></li>
+
+            <li>Open the point tool menu. <code>Edit > Options > Point tool</code> <br>Select the options to add to overlay and label points.<br>
+                <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_PointToolOptions.jpg" alt="Screencap. Point tool options in ImageJ." style="width:400px"></li>
+
+            <li>From the toolbar, select the Point tool. Click on each star to be counted. <br>If you make a mistake, click on the unwanted point and press *delete*.<br>
+                <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_PointToolCount.jpg" alt="Screencap. Stars counted with the point tool." style="width:400px"></li>
+            </ol>
+
+    <h1 id="removing-bias">Removing bias in quantification through thresholding</h1>
+
+        <p>In the star counting example, someone might count more than 9 stars. Or fewer. The person counting brings a certain bias as to what a star should look like. To remove bias, let's define exactly what a star looks like. That way, different people analyzing this image will arrive at the same star count. Here's how:</p>
+
+            <ol>
+            <li>Open the original image. <code>File > Open</code></li>
+
+            <li>Reduce the color profile to 8-bit. <code>Image > Type > 8 bit</code></li>
+
+            <li>Add a threshold. <code>Image > Adjust > Threshold > Apply</code><br>The best threshold for this image is "Intermodes" with options for "Red", and "Dark background".<br>Thresholds are mathematical algorithms that select some parts of a photo but not other parts.<br> Try out other thresholds to see how it works.<br>All photos in one dataset should be analyzed with the same threshold.<br>
+                <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_Threshold.jpg" alt="Screencap. Stars thresholded in ImageJ." style="width:400px"></li>
+
+            <li>Tell ImageJ to count the particles (ie. stars). <code>Analyze > Analyze particles > OK</code><br>Select the following options from the Analyze particles menu: "Show outlines," "Clear results," "Summarize," and "Exclude on edges"<br>
+                <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_AnalyzeParticles.jpg" alt="Screencap. Use analyze particles to count stars in a thresholded image in ImageJ." style="width:400px"></li>
+            </ol>
+
+        <p>Nine stars are counted.</p>
+
+        <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_CountAfterThreshold.jpg" alt="Screencap. Nine stars have been counted after thresholding." style="width:400px">
+
+    <h1>Automated quantification with macros</h1>
+
+        <p>With thresholding, counting 100 stars is as easy as counding 9 stars. However, threshold counting stars in dozens of images would be tedious because of the need to click through the menus. ImageJ macros can automate the click through. Let's make a macro to count the stars:</p>
+
+        <ol>
+            <li>Open the original image. <code>File > Open</code> </li>
+
+            <li>Open the Macro recorder. Edit the name of the macro, ex. "CountStars.ijm" (Note- .ijm is the ImageJ Macro extension).</li>
+
+            <li>Click through all the steps for threshold counting (steps 2-4 in the <a href="#removing-bias">previous section</a>). The steps will be recorded in the "recorder" window.
+                <ol>
+                    <li><code>Image > Type > 8 bit</code></li>
+                    <li><code>Image > Adjust > Threshold > Apply</code><br>Use Threshold options: "Intermodes", "Red", and "Dark background"</li>
+                    <li><code>Analyze > Analyze particles > OK</code><br>Use Analyze particles options: "Show outlines," "Clear results," "Summarize,"" and "Exclude on edges"<br>
+                        <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_MacroRecorder.jpg" alt="Screencap. The Macro Recorder shows each of the menu options that have been clicked." style="width:400px"></li>
+                </ol>
+            </li>
+
+            <li>In the recoder window, click <code>create</code>. A new .ijm window will open. Save the macro to the ImageJ > macros folder.</li>
+
+            <li>Close all windows.</li>
+
+            <li>Open the original image. <code>File > Open</code></li>
+
+            <li>Open CountStars.ijm. <code>Plugins > Macros > Open</code></li>
+
+            <li>Click on the .ijm window. New top menu options will appear. Run the macro. <code>Macros > Run macro</code><br>Nine stars are counted, just as if the menus were clicked through by hand.</li>
+
+            <li>Test the macro on another star image: 
+                <ol>
+                <li>Open the second image (use the one below). <code>File > Open</code><br>
+                    <img src="/assets/portfolio/ImageJ_StarsToCount2.jpg" alt="Second practice image for counting stars." style="width:400px"></li>
+
+                <li>Open CountStars.ijm. <code>Plugins > Macros > Open</code></li>
+                <li>Click on the .ijm window. Run the macro. <code>Macros > Run macro</code><br>Thirty two stars are counted.<br>
+                    <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_CountAfterThreshold2.jpg" alt="Screencap. Thirty two stars are counted in the second image." style="width:400px"></li>
+                </ol>
+            </li>
+        </ol>
+
+    <h1>Extending macros to automate quantification of all images in a folder</h1>
+
+        <p>If you have hundreds of images to process, the clicks required to open and close each image become tedious. Adding a few lines to a macro can automate opening each image, running the macro, saving the results, and closing each image. Here's how:</p>
+
+        <ol>
+            <li>Download the third example star image, below. Save all of three example images (StarsToCount 1, 2, and 3) into one folder. Put nothing else in this folder.<br>
+                <img src="/assets/portfolio/ImageJ_StarsToCount3.jpg" alt="Third practice image for counting stars." style="width:400px"></li>
+
+            <li>Open CountStars.ijm in ImageJ. <code>Plugins > Macros > Edit</code></li>
+
+            <li>Save the macro as "CountStarsInFolder.ijm" <code>File > Save As</code></li>
+
+            <li>Add the following text to the macro (or copy-paste from this <a href="assets/portfolio/ImageJ-MACRO-CountStarsInFolder.pdf">PDF</a>):
+                <ol>
+                    <li>Before the rest of the text in the macro window, add instructions to choose an input folder and an output folder (folders are called "directories" in ImageJ):<br>
+                        <code>
+                            <pre>
+
+                            dirInput = getDirectory("Choose  Directory "); 
+                            dirOutput = getDirectory("Choose  Directory ");
+                            </pre>
+                        </code></li>
+
+                    <li>Add instructions to process each image, or "file," in the folder:
+                        <code> <!--To display <,>, or & as text use &lt;, &gt;, or &amp--> 
+                            <pre>
+
+                            list = getFileList(dirInput); 
+
+                            setBatchMode(true); 
+                            for (i=0;i&lt;list.length;i++) { 
+                                open(dirInput+ list[i]);
+                            }
+                            </pre>
+                        </code></li>
+
+                    <li>At the end of the macro, add instructions to save the thresholded image and close the open windows.
+                        <code>
+                            <pre>
+
+                            saveAs("Jpeg", dirOutput + File.nameWithoutExtension + "_Threshold");
+                            close();
+                            }
+                            </pre>
+                        </code></li>
+                </ol>
+            </li>
+
+            <li>Save the macro. <code>File > Save</code></li>
+
+            <li>Run the macro. <code>Macros > Run macro</code></li>
+
+            <li>A dialogue box will open. Select the folder in which your images are stored.</li>
+
+            <li>A second dialogue box will open. Select a different folder in which thresholded images will be placed. Do not make a new folder inside the folder from step 7.</li>
+
+            <li>The macro will run. Star counts will appear in the Summary window (9, 32, and 19 stars in images 1, 2, and 3, respectively). Thresholded images will appear in the folder selected. </li>
+
+        </ol>
+
+    <h1>Editing macros</h1>
+
+        <p>Edit the contents of "CountStarsInFolder.ijm" to improve the accuracy of counting, or completely rework the contents to perform your own image quantification tasks.</p>
+
+        <ul>
+            <li>On the accuracy front, you may have noticed that there is a mistake made on "StarsToCount2.jpg": two stars appear so close together that they are counted as one. This type of error can be dealt with by adding a watershed step.</li>
+            <!-- Future: link to watershed page --> 
+
+            <li>On your own star images, you may notice that the stars aren't counted properly. You'll find the problem by examining the saved thresholded images: thresholding is failing. Thresholding takes the overall brightness and contrast of an image into account. Therefore, pictures taken with differet settings or at different times/locations often require different thresholds. Consider chaning the threshold to the one that works best for your images. Note that using different thresholds on images in a set can alter count results; controlling for camera settings and time/location in batches of images is the best way to avoid threshold bias.</li>
+
+            <li>Test the star counting macro on images of other objects to be counted. For example, try counting cell nuclei that have been stained with DAPI. As discussed above, the threshold may need to be changed.</li>
+
+            <li>Set a scale for the image and then report the area of each star. See my ImageJ protocols for an example.</li>
+
+        <p>The sky's the limit on macros [pun intended]. To infinity and beyond!</p>
+
+        <!-- Future: see my [ImageJ protocols for quantifying lipid droplets] for inspriation. -->
+
+    <h3>Starry sky image credit</h3>
+        <p>Thanks to Davide De Martin for the <a href="http://www.eso.org/public/images/eso1337b/">starry sky image</a> from the ESO/Digitized Sky Survey 2. All smaller sky images were cropped from the original.</p>
+
+   </div>
+
+
+<!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+
+</body>
+
+</html>
