@@ -1,4 +1,20 @@
-# [Start Bootstrap - Agency](https://startbootstrap.com/template-overviews/agency/)
+# Science Writing Portfolio 
+
+Hi! I'm Leigh. [This] (https://leighhenderson.github.io/sci-portfolio/) is my science writing portfolio. It's nice to meet you.
+
+In addition to doing the writing for the portfolio pieces, I also developed this portfolio website. It includes a home page and a few pages for my shorter portfolio pieces that are not published elsewhere.
+
+I used a bootstrap theme ([Agency](https://startbootstrap.com/template-overviews/agency/)) as a starting point for the website. The site is hosted on Github for free.
+
+So, in addition to copy writing, grant writing, and paper editing services, I also provide website design services. 
+
+Let's work together.
+
+
+
+
+
+# [Documentation from the bootstrap theme - Agency](https://startbootstrap.com/template-overviews/agency/)
 
 [Agency](https://startbootstrap.com/template-overviews/agency/) is a one page agency portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, a responsive timeline, and a working PHP contact form.
 
