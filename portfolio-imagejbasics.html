@@ -76,13 +76,13 @@
         <p>Let's count the stars in an image of the nighttime sky:</p>
             <ol>
             <li>Save the image below to your device (see image credit below). <code>File > Open</code><br>
-                <img src="/assets/portfolio/ImageJ_StarsToCount.jpg" alt="Practice image for counting stars." style="width:400px"></li>
+                <img src="assets/portfolio/ImageJ_StarsToCount.jpg" alt="Practice image for counting stars." style="width:400px"></li>
 
             <li>Open the point tool menu. <code>Edit > Options > Point tool</code> <br>Select the options to add to overlay and label points.<br>
-                <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_PointToolOptions.jpg" alt="Screencap. Point tool options in ImageJ." style="width:400px"></li>
+                <img src="assets/portfolio/Screencap_ImageJ_StarCounting_PointToolOptions.jpg" alt="Screencap. Point tool options in ImageJ." style="width:400px"></li>
 
             <li>From the toolbar, select the Point tool. Click on each star to be counted. <br>If you make a mistake, click on the unwanted point and press *delete*.<br>
-                <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_PointToolCount.jpg" alt="Screencap. Stars counted with the point tool." style="width:400px"></li>
+                <img src="assets/portfolio/Screencap_ImageJ_StarCounting_PointToolCount.jpg" alt="Screencap. Stars counted with the point tool." style="width:400px"></li>
             </ol>
 
     <h1 id="removing-bias">Removing bias in quantification through thresholding</h1>
@@ -95,15 +95,15 @@
             <li>Reduce the color profile to 8-bit. <code>Image > Type > 8 bit</code></li>
 
             <li>Add a threshold. <code>Image > Adjust > Threshold > Apply</code><br>The best threshold for this image is "Intermodes" with options for "Red", and "Dark background".<br>Thresholds are mathematical algorithms that select some parts of a photo but not other parts.<br> Try out other thresholds to see how it works.<br>All photos in one dataset should be analyzed with the same threshold.<br>
-                <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_Threshold.jpg" alt="Screencap. Stars thresholded in ImageJ." style="width:400px"></li>
+                <img src="assets/portfolio/Screencap_ImageJ_StarCounting_Threshold.jpg" alt="Screencap. Stars thresholded in ImageJ." style="width:400px"></li>
 
             <li>Tell ImageJ to count the particles (ie. stars). <code>Analyze > Analyze particles > OK</code><br>Select the following options from the Analyze particles menu: "Show outlines," "Clear results," "Summarize," and "Exclude on edges"<br>
-                <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_AnalyzeParticles.jpg" alt="Screencap. Use analyze particles to count stars in a thresholded image in ImageJ." style="width:400px"></li>
+                <img src="assets/portfolio/Screencap_ImageJ_StarCounting_AnalyzeParticles.jpg" alt="Screencap. Use analyze particles to count stars in a thresholded image in ImageJ." style="width:400px"></li>
             </ol>
 
         <p>Nine stars are counted.</p>
 
-        <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_CountAfterThreshold.jpg" alt="Screencap. Nine stars have been counted after thresholding." style="width:400px">
+        <img src="assets/portfolio/Screencap_ImageJ_StarCounting_CountAfterThreshold.jpg" alt="Screencap. Nine stars have been counted after thresholding." style="width:400px">
 
     <h1>Automated quantification with macros</h1>
 
@@ -119,7 +119,7 @@
                     <li><code>Image > Type > 8 bit</code></li>
                     <li><code>Image > Adjust > Threshold > Apply</code><br>Use Threshold options: "Intermodes", "Red", and "Dark background"</li>
                     <li><code>Analyze > Analyze particles > OK</code><br>Use Analyze particles options: "Show outlines," "Clear results," "Summarize,"" and "Exclude on edges"<br>
-                        <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_MacroRecorder.jpg" alt="Screencap. The Macro Recorder shows each of the menu options that have been clicked." style="width:400px"></li>
+                        <img src="assets/portfolio/Screencap_ImageJ_StarCounting_MacroRecorder.jpg" alt="Screencap. The Macro Recorder shows each of the menu options that have been clicked." style="width:400px"></li>
                 </ol>
             </li>
 
@@ -136,11 +136,11 @@
             <li>Test the macro on another star image: 
                 <ol>
                 <li>Open the second image (use the one below). <code>File > Open</code><br>
-                    <img src="/assets/portfolio/ImageJ_StarsToCount2.jpg" alt="Second practice image for counting stars." style="width:400px"></li>
+                    <img src="assets/portfolio/ImageJ_StarsToCount2.jpg" alt="Second practice image for counting stars." style="width:400px"></li>
 
                 <li>Open CountStars.ijm. <code>Plugins > Macros > Open</code></li>
                 <li>Click on the .ijm window. Run the macro. <code>Macros > Run macro</code><br>Thirty two stars are counted.<br>
-                    <img src="/assets/portfolio/Screencap_ImageJ_StarCounting_CountAfterThreshold2.jpg" alt="Screencap. Thirty two stars are counted in the second image." style="width:400px"></li>
+                    <img src="assets/portfolio/Screencap_ImageJ_StarCounting_CountAfterThreshold2.jpg" alt="Screencap. Thirty two stars are counted in the second image." style="width:400px"></li>
                 </ol>
             </li>
         </ol>
@@ -151,7 +151,7 @@
 
         <ol>
             <li>Download the third example star image, below. Save all of three example images (StarsToCount 1, 2, and 3) into one folder. Put nothing else in this folder.<br>
-                <img src="/assets/portfolio/ImageJ_StarsToCount3.jpg" alt="Third practice image for counting stars." style="width:400px"></li>
+                <img src="assets/portfolio/ImageJ_StarsToCount3.jpg" alt="Third practice image for counting stars." style="width:400px"></li>
 
             <li>Open CountStars.ijm in ImageJ. <code>Plugins > Macros > Edit</code></li>
 
