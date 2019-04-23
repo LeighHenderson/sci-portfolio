@@ -1,12 +1,10 @@
 # Science Writing Portfolio 
 
-Hi! I'm Leigh. [This] (https://leighhenderson.github.io/sci-portfolio/) is my science writing portfolio. It's nice to meet you.
+Hi! I'm Leigh. It's nice to meet you. [This](https://leighhenderson.github.io/sci-portfolio/) is my science writing portfolio.
 
-In addition to doing the writing for the portfolio pieces, I also developed this portfolio website. It includes a home page and a few pages for my shorter portfolio pieces that are not published elsewhere.
+In addition to writing for the portfolio pieces, I also developed the portfolio website. I used a bootstrap theme ([Agency](https://startbootstrap.com/template-overviews/agency/)) as a starting point for development. The site is hosted on Github for free.
 
-I used a bootstrap theme ([Agency](https://startbootstrap.com/template-overviews/agency/)) as a starting point for the website. The site is hosted on Github for free.
-
-So, in addition to copy writing, grant writing, and paper editing services, I also provide website design services. 
+In addition to copy writing, grant writing, and paper editing services, I also provide website design services. 
 
 Let's work together.
 
